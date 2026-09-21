@@ -1,4 +1,4 @@
-# Grade media - receives 3 grades and prints the grade media to 2 decimal places
+# Media nota - recebe 3 notas via input, calcula e imprime a média com 2 casas decimais
 
 nota1 = float(input("Digite a primeira nota: "))
 nota2 = float(input("Digite a segunda nota: "))

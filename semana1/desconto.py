@@ -1,4 +1,4 @@
-# Discount Calculator - receives price and discount (import math) = prints the final value of the product
+# Desconto - recebe o preço de um produto e o percentual de desconto, imprime o preço final
 
 price = float(input("Digite o preço do produto: "))
 typeDescont = input("Digite 'p' para desconto em porcentagem ou 'v' para desconto em valor: ")

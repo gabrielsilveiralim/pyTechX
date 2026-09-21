@@ -1,4 +1,4 @@
-# Even or Even - receives an integer and prints whether the number is even or even
+# Par ou impar - recebe um número inteiro e informa se ele é par ou ímpar
 
 number= int(input("Digite um número inteiro: "))
 

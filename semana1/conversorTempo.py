@@ -1,4 +1,4 @@
-# Time converter - receives seconds and prints time in hours, minutes and seconds
+# Conversor de tempo - recebe um valor em segundos e imprime o equivalente em horas, minutos e segundos.
 
 segundos = int(input("Digite o tempo em segundos: "))
 horas = segundos // 3600

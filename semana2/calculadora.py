@@ -8,4 +8,4 @@ def dividir(a, b):
         return "Erro: Divisão por zero não permitida"
 
 print(dividir(10, 2))  # Saída: 5.0
-print(dividir(10, 0))  # Saída: Erro: Divisão por zero não permitida
+print(dividir(10, 0))  # Saída: Erro: Divisão por zero não permitida 
