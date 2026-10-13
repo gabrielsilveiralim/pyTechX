@@ -1,0 +1,68 @@
+VERSÃO EQUIVALENTE EM PSEUDOCÓDIGO (estilo Portugol)
+
+INÍCIO
+    ESCREVER "Quantidade de produtos:"
+    LER N
+    ENQUANTO N <= 0 FAZER
+        ESCREVER "Informe uma quantidade positiva:"
+        LER N
+    FIM_ENQUANTO
+
+    DECLARAR nomes[ N ], categorias[ N ], precos[ N ]
+    PARA i DE 0 ATÉ N-1 FAZER
+        ESCREVER "Nome, categoria e preço do produto ", i+1
+        LER nomes[i], categorias[i], precos[i]
+    FIM_PARA
+
+    LER limite
+    LER criterio
+    PARA i DE 0 ATÉ N-1 FAZER
+        SE (criterio = "acima" E precos[i] > limite) OU
+           (criterio = "abaixo" E precos[i] < limite) ENTÃO
+            ESCREVER nomes[i], precos[i]
+        FIM_SE
+    FIM_PARA
+
+    PARA i DE 0 ATÉ N-2 FAZER
+        PARA j DE 0 ATÉ N-2-i FAZER
+            SE precos[j] > precos[j+1] ENTÃO
+                auxiliar <- precos[j]
+                precos[j] <- precos[j+1]
+                precos[j+1] <- auxiliar
+                // Trocar também nomes e categorias nas mesmas posições.
+            FIM_SE
+        FIM_PARA
+    FIM_PARA
+    ESCREVER "Produtos em ordem crescente"
+
+    PARA i DE N-1 ATÉ 0 PASSO -1 FAZER
+        ESCREVER nomes[i], precos[i]
+    FIM_PARA
+
+    DECLARAR categoriasUnicas[ N ]
+    quantidadeUnicas <- 0
+    PARA i DE 0 ATÉ N-1 FAZER
+        encontrada <- FALSO
+        PARA j DE 0 ATÉ quantidadeUnicas-1 FAZER
+            SE categorias[i] = categoriasUnicas[j] ENTÃO
+                encontrada <- VERDADEIRO
+            FIM_SE
+        FIM_PARA
+        SE encontrada = FALSO ENTÃO
+            categoriasUnicas[quantidadeUnicas] <- categorias[i]
+            quantidadeUnicas <- quantidadeUnicas + 1
+        FIM_SE
+    FIM_PARA
+
+    menor <- precos[0]
+    maior <- precos[0]
+    soma <- 0
+    PARA i DE 0 ATÉ N-1 FAZER
+        SE precos[i] < menor ENTÃO menor <- precos[i] FIM_SE
+        SE precos[i] > maior ENTÃO maior <- precos[i] FIM_SE
+        soma <- soma + precos[i]
+    FIM_PARA
+    media <- soma / N
+    ESCREVER menor, maior, media
+FIM
+

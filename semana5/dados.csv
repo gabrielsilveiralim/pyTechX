@@ -1,0 +1,4 @@
+email,cpf,telefone,data
+ana.lima@email.com,12345678901,11987654321,2002-05-14
+email-invalido,123.456.789-00,(11) 3333-4444,2024-02-30
+gabriel@email.org,98765432100,+55 21 99876-5432,2025-12-01
